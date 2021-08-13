@@ -1,0 +1,209 @@
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+  --VeryDarkBlue: hsl(234, 12%, 34%);
+  --GrayishBlue: hsl(229, 6%, 66%);
+  --VeryLightGray: hsl(0, 0%, 98%);
+  --spacer: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  min-height: 95vh;
+  background-color: var(--VeryLightGray);
+  font-size: 15px;
+}
+
+.container {
+  margin-top: 3rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13.875rem, 1fr));
+  gap: calc(var(--spacer) * 2);
+}
+
+.header1 {
+  color: var(--GrayishBlue);
+  text-align: center;
+  font-weight: normal;
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.header2 {
+  color: var(--VeryDarkBlue);
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.desc {
+  color: var(--GrayishBlue);
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 4.5rem;
+  margin-top: 1.5rem;
+}
+
+.supervisor {
+  background-color: #fff;
+  margin: 1.5rem;
+  text-align: right;
+  border-radius: 0.5rem;
+  border-top: var(--Cyan) 4px solid;
+  box-shadow: -1px 21px 29px -26px var(--Blue);
+}
+
+.supervisor .spheader {
+  color: var(--VeryDarkBlue);
+  text-align: left;
+  margin: 1rem;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.supervisor .spdesc {
+  text-align: left;
+  color: var(--GrayishBlue);
+  margin: 1rem;
+}
+
+.supervisor .spimg {
+  margin: 1rem;
+  text-align: right;
+}
+
+.teambuilder {
+  background-color: #fff;
+  margin: 1.5rem;
+  text-align: right;
+  border-radius: 0.5rem;
+  border-top: var(--Red) 4px solid;
+  box-shadow: -1px 21px 29px -26px var(--Blue);
+}
+
+.teambuilder .tbheader {
+  color: var(--VeryDarkBlue);
+  text-align: left;
+  margin: 1rem;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.teambuilder .tbdesc {
+  text-align: left;
+  color: var(--GrayishBlue);
+  margin: 1rem;
+}
+
+.teambuilder .tbimg {
+  margin: 1rem;
+  text-align: right;
+}
+
+.karma {
+  background-color: #fff;
+  margin: 1.5rem;
+  text-align: right;
+  border-radius: 0.5rem;
+  border-top: var(--Orange) 4px solid;
+  box-shadow: -1px 21px 29px -26px var(--Blue);
+}
+
+.karma .kheader {
+  color: var(--VeryDarkBlue);
+  text-align: left;
+  margin: 1rem;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.karma .kdesc {
+  text-align: left;
+  color: var(--GrayishBlue);
+  margin: 1rem;
+}
+
+.karma .kimg {
+  margin: 1rem;
+  text-align: right;
+}
+
+.calculator {
+  background-color: #fff;
+  margin: 1.5rem;
+  text-align: right;
+  border-radius: 0.5rem;
+  border-top: var(--Blue) 4px solid;
+  box-shadow: -1px 21px 29px -26px var(--Blue);
+}
+
+.calculator .cheader {
+  color: var(--VeryDarkBlue);
+  text-align: left;
+  margin: 1rem;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.calculator .cdesc {
+  text-align: left;
+  color: var(--GrayishBlue);
+  margin: 1rem;
+}
+
+.calculator .cimg {
+  margin: 1rem;
+  text-align: right;
+}
+
+@media screen and (min-width: 535px) {
+  .cards {
+    grid-template-areas:
+      "cyan red"
+      "cyan red"
+      "orange blue"
+      "orange blue";
+  }
+}
+
+@media screen and (min-width: 792px) {
+  .cards {
+    grid-template-areas:
+      ". red ."
+      "cyan red blue"
+      "cyan orange blue"
+      ". orange .";
+  }
+
+  .supervisor {
+    grid-area: cyan;
+  }
+  .teambuilder {
+    grid-area: red;
+  }
+  .karma {
+    grid-area: orange;
+  }
+  .calculator {
+    grid-area: blue;
+  }
+}
