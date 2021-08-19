@@ -1,0 +1,181 @@
+:root {
+  --Violet: hsl(257, 40%, 49%);
+  --SoftMagenta: hsl(300, 69%, 71%);
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  min-height: 95vh;
+  background-image: url(./images/bg-mobile.svg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--Violet);
+  margin: 1.5rem;
+}
+
+.graphic > img {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: auto;
+  margin-right: 8rem;
+}
+
+.logo > img {
+  margin-bottom: 8rem;
+  width: 200px;
+  height: 80px;
+  position: relative;
+  top: 50px;
+}
+
+.header > h1 {
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-right: 2rem;
+  text-align: center;
+  margin-top: 3rem;
+  font-weight: 600;
+}
+
+.desc > p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  margin-top: 2rem;
+  margin-left: auto;
+}
+
+.desc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register > button {
+  background-color: #ffffff;
+  color: var(--Violet);
+  border-radius: 1rem;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 60%;
+  padding: 0.7rem;
+  cursor: pointer;
+  transition: box-shadow 0.5s 0s ease, all 0.5s 0s ease;
+  border: none;
+}
+
+button:hover {
+  background-color: var(--SoftMagenta);
+  color: white;
+  outline: none;
+  transition: box-shadow 0.5s 0s ease, all 0.5s 0s ease;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  max-width: 100px;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+.social-icons .fa {
+  border: 1px white solid;
+  padding: 0.8rem;
+  margin: 1rem;
+  color: #ffffff;
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 792px) {
+  body {
+    line-height: 1.8rem;
+    background-image: url(./images/bg-desktop.svg);
+  }
+
+  .container {
+    display: grid;
+    grid-template-areas:
+      "logo . . . . ."
+      "graphic graphic graphic graphic header header"
+      "graphic graphic graphic graphic desc desc"
+      "graphic graphic graphic graphic register ."
+      "graphic graphic graphic graphic . ."
+      ". . . . . social";
+  }
+
+  .logo {
+    grid-area: logo;
+    margin-left: 15px;
+  }
+  .graphic {
+    grid-area: graphic;
+  }
+  .header {
+    grid-area: header;
+    text-align: left;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+
+  .header h1 {
+    text-align: left;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 2rem;
+    line-height: 2.8rem;
+  }
+  .desc {
+    grid-area: desc;
+    text-align: left;
+    margin: 2rem;
+  }
+
+  .register {
+    grid-area: register;
+    position: relative;
+    right: 30px;
+  }
+
+  .social-icons {
+    grid-area: social;
+    grid-gap: 0.8rem;
+  }
+}
