@@ -1,0 +1,118 @@
+:root{
+    --DarkCyan: hsl(185, 75%, 39%);
+    --VeryDarkDesaturatedBlue: hsl(229, 23%, 23%);
+    --DarkGrayishBlue: hsl(227, 10%, 46%);
+
+
+    --DarkGray: hsl(0, 0%, 59%);
+    --LightGray: hsl(0, 0%, 75%);
+
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    min-height: 100vh;
+    background-color: #19a2ae;
+    background-image: url("/images/bg-pattern-top.svg"), url("/images/bg-pattern-bottom.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom 50vh right 50vw, top 50vh left 50vw;
+}
+
+.container{
+    margin: 2rem;
+    background-color: white;
+    border-radius: 1rem ;
+}
+
+.profilephoto{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 50px;
+    border-radius: 50%;
+}
+
+.profilephoto img{
+    border-radius: 50%;
+    border: white 8px solid;
+}
+
+.img img{
+    border-radius: 1rem 1rem 0 0;
+}
+
+.victorInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    bottom: 20px;
+    
+}
+.name{
+    color: var(--VeryDarkDesaturatedBlue);
+}
+.london{
+    color: var(--DarkGrayishBlue);
+    margin-top: 0.5rem;
+}
+
+.stats{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.stats .followers{
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+
+
+.stats .likes{
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+
+
+.stats .photos{
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+
+.header{
+    font-weight: 900;
+    color: var(--VeryDarkDesaturatedBlue);
+    
+}
+
+.desc{
+    color: var(--DarkGray);
+    font-size: 12px;
+    padding: 0.5rem;
+
+}
+
+.stats{
+    border-top: 1px var(--LightGray) solid ;
+    margin-top: 1.4rem;
+    margin-bottom: 1rem;
+}
+
