@@ -1,0 +1,151 @@
+:root {
+  --PaleBlue: hsl(225, 100%, 94%);
+  --BrightBlue: hsl(245, 75%, 52%);
+  --HoverBlue: hsl(245, 75%, 62%);
+
+  --VeryPaleBlue: hsl(225, 100%, 98%);
+  --DesaturatedBlue: hsl(224, 23%, 55%);
+  --DarkBlue: hsl(223, 47%, 23%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  min-height: 100vh;
+  background-color: var(--VeryPaleBlue);
+  background-image: url(./images/pattern-background-mobile.svg);
+  background-color: var(--PaleBlue);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.container {
+  border-radius: 2rem 2rem 2rem 2rem;
+  margin: 2rem;
+  background-color: white;
+}
+
+.img img {
+  width: 100%;
+  border-radius: 2rem 2rem 0 0;
+}
+
+.header {
+  text-align: center;
+  font-weight: bold;
+  margin: 2rem;
+}
+.header h1 {
+  font-weight: 900;
+}
+
+.desc {
+  text-align: center;
+  color: var(--DesaturatedBlue);
+  margin: 2rem;
+}
+
+.music {
+  background-color: var(--VeryPaleBlue);
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  padding: 5%;
+}
+
+.annual {
+  display: flex;
+  flex-direction: column;
+  right: 15px;
+}
+
+.annual .plan {
+  font-weight: 900;
+}
+
+.annual .year {
+  color: var(--DesaturatedBlue);
+}
+.change {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 700;
+}
+.change a:hover {
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--BrightBlue);
+}
+
+.payment {
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.payment button {
+  border: none;
+  padding: 1.3rem;
+  border-radius: 1rem;
+  width: 80%;
+  margin: auto;
+  margin-top: 0.4rem;
+  margin-bottom: 1rem;
+  background-color: var(--BrightBlue);
+  color: white;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 2px 11px 29px -2px rgba(43, 43, 79, 1);
+}
+
+.payment button:hover {
+  background-color: var(--HoverBlue);
+}
+
+.cancel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.cancel a {
+  text-decoration: none;
+  margin-bottom: 1.5rem;
+  font-weight: 900;
+  color: var(--DesaturatedBlue);
+}
+
+.cancel a:hover {
+  color: #000;
+}
+
+@media screen and (min-width: 792px) {
+  body {
+    background-image: url(./images/pattern-background-desktop.svg);
+  }
+  .container {
+    max-width: 450px;
+  }
+
+  .annual {
+    position: relative;
+    right: 15px;
+  }
+}
