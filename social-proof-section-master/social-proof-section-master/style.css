@@ -1,0 +1,159 @@
+:root {
+  --VeryDarkMagenta: hsl(300, 43%, 22%);
+  --SoftPink: hsl(333, 80%, 67%);
+
+  --DarkGrayishMagenta: hsl(303, 10%, 53%);
+  --LightGrayishMagenta: hsl(300, 24%, 91%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Spartan", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  min-height: 100vh;
+  background-image: url(/images/bg-pattern-top-mobile.svg),
+    url(/images/bg-pattern-bottom-mobile.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top, bottom;
+}
+
+.header {
+  text-align: center;
+  color: var(--VeryDarkMagenta);
+  margin: 3rem;
+  font-size: 1rem;
+}
+
+.littleHeader {
+  text-align: center;
+  color: var(--DarkGrayishMagenta);
+  margin: 2rem;
+}
+
+.rating {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+  background-color: var(--LightGrayishMagenta);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.rating .rated {
+  padding: 0.5rem;
+  color: var(--VeryDarkMagenta);
+}
+
+.card {
+  margin: 2rem;
+  padding: 2rem;
+  background-color: var(--VeryDarkMagenta);
+  border-radius: 1rem;
+}
+
+.profile img {
+  border-radius: 50%;
+  height: 50px;
+}
+
+.profile {
+  display: flex;
+  justify-content: start;
+  margin-bottom: 1rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 1.7rem;
+}
+
+span {
+  padding: 0.1rem;
+}
+
+.name {
+  color: var(--White);
+  font-weight: bold;
+}
+
+.vg {
+  color: var(--SoftPink);
+}
+
+.desc {
+  color: var(--White);
+  line-height: 1.7rem;
+}
+
+@media screen and (min-width: 792px) {
+  body {
+    min-height: 100vh;
+    background-image: url(/images/bg-pattern-top-desktop.svg),
+      url(/images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: -10% 0%, 150% 100%;
+  }
+  .container {
+    margin: 6rem;
+    display: grid;
+    grid-template-areas:
+      "header header header header . ratingOne ratingOne ratingOne ratingOne ratingOne . ."
+      "header header header header . . ratingTwo ratingTwo ratingTwo ratingTwo ratingTwo  ."
+      "littleHeader littleHeader littleHeader littleHeader . . . ratingThree ratingThree ratingThree ratingThree ratingThree"
+      "card1 card1 card1 card1 . . . . . . . ."
+      "card1 card1 card1 card1 card2 card2 card2 card2 . . . ."
+      "card1 card1 card1 card1 card2 card2 card2 card2 card3 card3 card3 card3"
+      "card1 card1 card1 card1 card2 card2 card2 card2 card3 card3 card3 card3"
+      "card1 card1 card1 card1 card2 card2 card2 card2 card3 card3 card3 card3"
+      "card1 card1 card1 card1 card2 card2 card2 card2 card3 card3 card3 card3"
+      "card1 card1 card1 card1 card2 card2 card2 card2 card3 card3 card3 card3"
+      ". . . . card2 card2 card2 card2 card3 card3 card3 card3"
+      ". . . . . . . .card3 card3 card3 card3";
+  }
+
+  .header {
+    grid-area: header;
+    min-width: 100px;
+    margin-bottom: 0;
+    font-size: 25px;
+  }
+  .littleHeader {
+    grid-area: littleHeader;
+  }
+  .ratingOne {
+    grid-area: ratingOne;
+    margin-bottom: 0;
+  }
+  .ratingTwo {
+    grid-area: ratingTwo;
+
+    margin-bottom: 0;
+  }
+  .ratingThree {
+    grid-area: ratingThree;
+  }
+
+  .cardOne {
+    grid-area: card1;
+  }
+  .cardTwo {
+    grid-area: card2;
+  }
+  .cardThree {
+    grid-area: card3;
+  }
+}
