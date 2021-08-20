@@ -39,9 +39,6 @@ Users should be able to:
 
 Flexbox
 
-```
-
-
 ### Useful resources
 
 https://makingcss.com/transition
