@@ -1,0 +1,164 @@
+:root {
+  --Blue: hsl(223, 87%, 63%);
+  --LightBlue: hsl(223, 87%, 70%);
+
+  --PaleBlue: hsl(223, 100%, 88%);
+  --LightRed: hsl(354, 100%, 66%);
+
+  --Gray: hsl(0, 0%, 59%);
+  --VeryDarkBlue: hsl(209, 33%, 12%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Libre Franklin", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: auto;
+}
+
+.header img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.desc h1 {
+  text-align: center;
+  color: var(--Gray);
+  margin-bottom: 2rem;
+}
+
+.sub h5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 2rem;
+  color: var(--VeryDarkBlue);
+}
+
+.soon {
+  color: var(--VeryDarkBlue);
+  font-weight: 700;
+}
+
+
+#email {
+  border-radius: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2.8rem;
+  padding-right: 2.8rem;
+  border-color: var(--PaleBlue);
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.notify {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  border-radius: 2rem;
+  outline: none;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 6.4rem;
+  padding-right: 6.4rem;
+  margin-bottom: 1.4rem;
+  background-color: var(--Blue);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.notify:hover{
+  color: var(--PaleBlue);
+  background-color: var(--LightBlue);
+}
+
+small {
+  color: var(--LightRed);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: 0rem;
+}
+
+.img img {
+  width: 80%;
+  margin: auto;
+  display: flex;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100px;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 2rem;
+  cursor: pointer;
+
+}
+ i{
+  border-radius: 50%;
+  border: 10px solid white ;
+  color:var(--Blue);
+}
+i:hover{
+  color: white;
+  background-color: var(--Blue);
+  border: 10px solid var(--Blue);
+  border-radius: 50%;
+  
+}
+.formBox .form__text__error {
+  visibility: hidden;
+}
+
+.formBox.error #email {
+  border-color: var(--LightRed);
+}
+
+.formBox.error small {
+  visibility: visible;
+}
+
+.form__text__error{
+ position: relative;
+ bottom: 20px;
+
+}
+
+@media screen and (min-width: 792px) {
+  .freeform{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+     }
+
+     .form__text__error{
+      display: flex;
+      justify-content: flex-start;
+      left: 15px;
+
+}
+
+}

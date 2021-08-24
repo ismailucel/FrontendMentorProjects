@@ -1,0 +1,99 @@
+# Frontend Mentor - Ping coming soon page solution
+
+This is a solution to the [Ping coming soon page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ping-single-column-coming-soon-page-5cadd051fec04111f7b848da). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+
+## Table of contents
+
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+- [Author](#author)
+
+
+
+
+## Overview
+
+### The challenge
+
+Users should be able to:
+
+- View the optimal layout for the site depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Submit their email address using an `input` field
+- Receive an error message when the `form` is submitted if:
+	- The `input` field is empty. The message for this error should say *"Whoops! It looks like you forgot to add your email"*
+	- The email address is not formatted correctly (i.e. a correct email address should have this structure: `name@host.tld`). The message for this error should say *"Please provide a valid email address"*
+
+### Screenshot
+
+![](./screenshot.jpg)
+![](./screenshot1.jpg)
+![](./screenshot2.jpg)
+![](./screenshot3.jpg)
+
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- Mobile-first workflow
+- Client Side JS Validation
+- [Font Awesome](https://fontawesome.com/) - Social Icons
+
+
+
+### What I learned
+
+This was the first ever project i used vanilla js.
+
+To see how you can add code snippets, see below:
+
+const form = document.getElementById('freeform');
+const email = document.getElementById('email')
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    checkInputs();
+});
+
+function checkInputs() {
+    const emailValue = email.value.trim();
+
+    if(emailValue === '') {
+		setErrorFor(email, 'Email cannot be blank');
+	} else if (!isEmail(emailValue)) {
+		setErrorFor(email, 'Please provide a valid email address');
+	} else {
+		setSuccessFor(email);
+	}
+}
+
+function setErrorFor(input, message) {
+	const formControl = input.parentElement;
+	const small = formControl.querySelector('small');
+	formControl.className = 'formBox error';
+	small.innerText = message;
+}
+
+function setSuccessFor(input) {
+	const formControl = input.parentElement;
+	formControl.className = 'formBox success';
+}
+	
+function isEmail(email) {
+	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+}
+
+
+
+## Author
+
+- Linkedin - [İsmail Üçel](https://www.linkedin.com/in/ismail-%C3%BC%C3%A7el-a487b618a/)
