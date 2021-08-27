@@ -1,0 +1,179 @@
+:root {
+  --Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+
+  --PaleBlue: hsl(243, 100%, 93%);
+  --GrayishBlue: hsl(229, 7%, 55%);
+  --DarkBlue: hsl(228, 56%, 26%);
+  --VeryDarkBlue: hsl(229, 57%, 11%);
+}
+
+* {
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+}
+
+body {
+  background: url(./images/bg-mobile.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  min-height: 100vh;
+}
+
+.icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.8rem;
+}
+
+.icons img {
+  border: 1rem solid var(--VeryDarkBlue);
+  border-radius: 0.5rem;
+  background-color: var(--VeryDarkBlue);
+}
+
+.card {
+  border-radius: 1rem;
+  margin: 0.5rem;
+  background-color: var(--DarkBlue);
+  padding: 3rem;
+  margin-bottom: 2rem;
+}
+
+.card1 {
+  border-radius: 1rem 8rem 1rem 1rem;
+}
+
+.card2 .desc {
+  color: var(--GrayishBlue);
+}
+
+.card2 .gb {
+  color: white;
+}
+
+.scale {
+  width: 100%;
+  height: 1.2rem;
+  background-color: var(--VeryDarkBlue);
+  border-radius: 50px;
+  padding: 0.2em;
+  margin: 1em 0 0.5em 0;
+}
+
+.scale__amount {
+  width: 82%;
+  height: 100%;
+  background-image: linear-gradient(to right, #ffa399, #ff4d97);
+  border-radius: 50px;
+  padding: 0;
+}
+
+.scale__indicator {
+  height: 75%;
+  width: 10px;
+  padding-top: 0px;
+  position: relative;
+  top: 1.5px;
+  right: 2.4px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-left: auto;
+}
+
+.process {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-weight: 700;
+}
+
+.button {
+  width: 50%;
+  height: 2.5rem;
+  margin: auto;
+  padding: 0.5rem;
+  background-color: white;
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+  top: 70px;
+}
+
+.button p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.number {
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.left {
+  font-weight: 700;
+  font-size: 10px;
+  color: var(--GrayishBlue);
+}
+
+@media screen and (min-width: 792px) {
+  body {
+    background-image: url(/images/bg-desktop.png);
+    background-size: 100% 50%;
+    background-position: bottom right;
+    background-color: var(--VeryDarkBlue);
+  }
+
+  .container {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .card2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .warning {
+    text-align: left;
+  }
+
+  .button {
+    position: relative;
+    letter-spacing: 0.1rem;
+    padding: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    top: -110px;
+    margin: 3rem;
+    border-left: 5px solid white;
+  }
+  .button::after {
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: -1.5em;
+    border-top: 30px solid white;
+    border-left: 30px solid transparent;
+  }
+
+  .part1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+  }
+
+  .scalegbcontainer {
+    min-width: 400px;
+  }
+}
