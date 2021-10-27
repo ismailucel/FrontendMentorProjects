@@ -28,7 +28,7 @@ Users should be able to:
 ![](./screenshot.jpg)
 ![](./screenshot1.jpg)
 ![](./screenshot2.jpg)
-![](./screenshot3.jpg)
+![](./screenshot3.png)
 
 ## My process
 
