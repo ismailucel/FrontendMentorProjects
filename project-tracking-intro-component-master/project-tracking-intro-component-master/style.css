@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow|Barlow+Condensed:400,700&display=swap');
+:root {
+  --Red: hsl(0, 100%, 68%);
+  --VeryDarkBlue: hsl(230, 29%, 20%);
+  --DarkGrayishBlue: hsl(230, 11%, 40%);
+  --GrayishBlue: hsl(231, 7%, 65%);
+  --LightGrayishBlue: hsl(207, 33%, 95%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body{
+font-family: 'Barlow',sans-serif;
+overflow-x: hidden;
+}
+
+body::after {
+  background-color: var(--LightGrayishBlue);
+  border-bottom-left-radius: 100px;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 70vh;
+  width: 50vw;
+  z-index: -1;
+}
+
+h1,
+h3,
+button,
+nav a {
+  font-family: 'Barlow Condensed', sans-serif;
+  
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content:space-between;
+  width: 95%;
+  margin-bottom: 8rem;
+  margin-top: 1.5rem;
+  
+}
+
+.hamburger{
+  display: block;
+  border: none;
+}
+.hamburger:focus{
+  outline: none;
+}
+
+.icon-hamburger{
+  display: block;
+  
+}
+
+.icon-close {
+  display: none;
+
+}
+
+.show-nav .icon-close{
+  display: block;
+}
+
+.show-nav .icon-hamburger{
+  display: none;
+}
+
+.show-nav ul{
+  transform: translateX(0);
+}
+
+ul{
+    background-color: white;
+		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+		flex-direction: column;
+		position: fixed;
+		top: 70px;
+		left: 20px;
+		width: calc(100% - 40px);
+		transform: translateX(120%);
+		z-index: 100;
+		transition: transform 0.4s ease;
+}
+
+ul li.login{
+  margin: 40px 30px 20px;
+  
+}
+
+ul li.login a {
+  color: var(--GrayishBlue);
+  
+}
+
+ul li.login::before {
+  border-radius: 0;
+  top: 0;
+  right: 5%;
+  left: 5%;
+  transform: translate(0px, 150px);
+  height: 1px;
+  width: 90%;
+  opacity: 0.5;
+  content: '';
+  position: absolute;
+  
+}
+
+ul li{
+	margin: 20px 30px;
+  text-align: center;
+  list-style: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+
+.newClass {
+  display: flex;
+  margin-top: 8rem;
+  
+}
+
+.pics img {
+  max-width: 100%;
+  transform: scale(1.6) translateX(17%);
+  
+}
+
+.new {
+  color: var(--LightGrayishBlue);
+  background-color: var(--VeryDarkBlue);
+  padding: 0.5rem;
+  border-radius: 19px;
+  font-weight: 400;
+  
+}
+
+.mono {
+  color: var(--GrayishBlue);
+  font-weight: bold;
+  margin: 2rem;
+  letter-spacing: 0.2rem;
+}
+
+.heading {
+  color: var(--VeryDarkBlue);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 55px;
+  margin-top: 0;
+}
+
+.desc {
+  font-weight: bold;
+  font-size: 25px;
+  color: var(--GrayishBlue);
+}
+
+.scheduleButton {
+  display: flex;
+}
+
+.schedule {
+  color: var(--LightGrayishBlue);
+  background-color: var(--Red);
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+}
+
+.schDesc {
+  padding-left: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: var(--GrayishBlue);
+}
+
+
+.introduction{
+  margin-left: 2rem;
+} 
+
+ul li a:hover{
+  text-decoration: underline;
+}
+
+.schedule:hover{
+  background-color: rgb(216, 127, 127);
+}
+
+@media screen and (min-width: 1244px) {
+
+  body{
+    height: 100vh;
+    overflow: hidden;
+  }
+
+
+
+  body::after {
+    
+    height: 50vh;
+  
+  }
+
+
+
+
+  .hamburger{
+    display: none;
+  }
+
+  
+  .main{
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .pics{
+    max-width: 50%;
+  }
+
+  .pics img {
+    max-width: 100%;
+    transform: scale(1.4) translateX(12%);
+
+  }
+
+  .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .links{
+    position: relative;
+    transform: none;
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    background-color: var(--LightGrayishBlue);
+    border: none;
+    box-shadow: none;
+
+  }
+
+  ul li{
+    margin-left: 2.5rem;
+  }
+
+
+
+  .logoPic{
+    position: relative;
+    left: 100px;
+
+  }
+  .introduction{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    bottom: 140px;
+    margin-left: 7rem;
+    padding: 1rem; 
+  }
+  .heading{
+    margin-bottom: 0;
+  }
+  .desc{
+    margin-bottom: 6rem;
+  }
+  ul li.login {
+    
+    margin: 20px 30px;
+
+  }
+
+
+  ul li.login::before {
+    border-radius: 50%;
+    top: 50%;
+    left: 0;
+    transform: translate(500px, -50%);
+    opacity: 0.5;
+    height: 8px;
+    width: 8px;
+    background-color: var(--GrayishBlue);
+    content: '';
+    position: absolute;
+
+  }
+
+  
+}
