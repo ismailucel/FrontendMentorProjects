@@ -23,7 +23,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](<./images/Ekran%20G%C3%B6r%C3%BCnt%C3%BCs%C3%BC%20(482).png.jpg>)
+![](<./images/Ekran%20G%C3%B6r%C3%BCnt%C3%BCs%C3%BC%20(482).png>)
 ![](<./images/Ekran%20G%C3%B6r%C3%BCnt%C3%BCs%C3%BC%20(483).png>)
 
 ## My process
