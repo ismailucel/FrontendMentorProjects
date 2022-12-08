@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  --Softblue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --VerydarkbluemainBG: hsl(217, 54%, 11%);
+  --VerydarkbluecardBG: hsl(216, 50%, 16%);
+  --Verydarkblueline: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--VerydarkbluemainBG);
+  font-family: "Outfit", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: auto;
+}
+
+.card {
+  background-color: var(--VerydarkbluecardBG);
+  width: 375px;
+  border-radius: 35px;
+}
+
+.etheriumImage {
+  width: 345px;
+  display: flex;
+  margin: auto;
+  border-radius: 35px;
+  padding: 15px;
+}
+
+.header h3 {
+  color: var(--White);
+  padding-left: 35px;
+  font-size: 22px;
+  padding-top: 10px;
+  cursor: pointer;
+}
+
+.desc {
+  padding-left: 35px;
+  padding-top: 20px;
+  color: var(--Softblue);
+  font-size: 18px;
+  text-align: left;
+}
+
+.eth {
+  display: flex;
+  padding-left: 35px;
+  padding-top: 20px;
+}
+.days {
+  display: flex;
+  padding-left: 115px;
+  padding-top: 20px;
+}
+
+.ethNumber {
+  padding-left: 9px;
+  color: var(--Cyan);
+}
+.daysNumber {
+  padding-left: 9px;
+  color: var(--Softblue);
+}
+
+.stats {
+  display: flex;
+  flex-direction: row;
+}
+
+.userProfile {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--White);
+  border-radius: 50%;
+}
+.user {
+  display: flex;
+  margin: 30px;
+}
+.creation {
+  color: var(--Softblue);
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+.name {
+  color: var(--White);
+  cursor: pointer;
+}
+
+.name:hover {
+  color: var(--Cyan);
+  transition: ease-in-out;
+}
+
+.line {
+  border-bottom: 0.1px solid gray;
+  width: 80%;
+  margin: auto;
+  padding-top: 35px;
+}
+
+.headerh3:hover {
+  color: var(--Cyan);
+  transition: ease-in-out;
+}
+
+.image {
+  position: relative;
+  cursor: pointer;
+}
+.image:hover .etheriumView {
+  opacity: 1;
+}
+
+.image:hover .etheriumImage {
+  filter: opacity(0.5) drop-shadow(0 0 0 var(--Cyan)) brightness(1.5);
+}
+
+.etheriumView {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
